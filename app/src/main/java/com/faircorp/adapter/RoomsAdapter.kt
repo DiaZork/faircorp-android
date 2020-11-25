@@ -47,4 +47,11 @@ class RoomsAdapter(val listener: OnRoomSelectedListener) :
     }
 
     override fun getItemCount(): Int = items.size
+
+    override fun onViewRecycled(holder: RoomsAdapter.RoomViewHolder) { // (2)
+        super.onViewRecycled(holder)
+        holder.apply {
+            itemView.setOnClickListener(null)
+        }
+    }
 }

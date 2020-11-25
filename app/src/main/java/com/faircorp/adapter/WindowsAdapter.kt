@@ -9,25 +9,26 @@ import com.faircorp.R
 import com.faircorp.model.dto.WindowDto
 import com.faircorp.model.listener.OnWindowSelectedListener
 
-class WindowsAdapter(val listener: OnWindowSelectedListener) : RecyclerView.Adapter<WindowsAdapter.WindowViewHolder>() { // (1)
+class WindowsAdapter(val listener: OnWindowSelectedListener) :
+    RecyclerView.Adapter<WindowsAdapter.WindowViewHolder>() {
 
-    inner class WindowViewHolder(view: View) : RecyclerView.ViewHolder(view) { // (2)
+    inner class WindowViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val name: TextView = view.findViewById(R.id.txt_window_name)
         val room: TextView = view.findViewById(R.id.txt_window_room)
         val status: TextView = view.findViewById(R.id.txt_status)
     }
 
-    private val items = mutableListOf<WindowDto>() // (3)
+    private val items = mutableListOf<WindowDto>()
 
-    fun update(windows: List<WindowDto>) {  // (4)
+    fun update(windows: List<WindowDto>) {
         items.clear()
         items.addAll(windows)
         notifyDataSetChanged()
     }
 
-    override fun getItemCount(): Int = items.size // (5)
+    override fun getItemCount(): Int = items.size
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WindowViewHolder { // (6)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WindowViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.activity_windows_item, parent, false)
         return WindowViewHolder(view)

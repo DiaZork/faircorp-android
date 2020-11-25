@@ -21,7 +21,7 @@ class RoomsActivity : BasicActivity(), OnRoomSelectedListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rooms)
 
-        val recyclerView = findViewById<RecyclerView>(R.id.list_windows) // (2)
+        val recyclerView = findViewById<RecyclerView>(R.id.list_rooms) // (2)
         val adapter = RoomsAdapter(this)
 
         recyclerView.layoutManager =
@@ -55,7 +55,7 @@ class RoomsActivity : BasicActivity(), OnRoomSelectedListener {
         }
     }
     override fun onRoomSelected(id: Long) {
-        val intent = Intent(this, WindowActivity::class.java).putExtra(ROOM_ID, id)
-        startActivity(intent)
+//        val intent = Intent(this, WindowActivity::class.java).putExtra(ROOM_ID, id)
+//        startActivity(intent)
     }
 }

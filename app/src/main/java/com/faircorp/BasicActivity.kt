@@ -21,7 +21,7 @@ open class BasicActivity : AppCompatActivity() {
                 Intent(this, WindowsActivity::class.java)
             )
             R.id.menu_rooms -> startActivity(
-                Intent(this, WindowsActivity::class.java)
+                Intent(this, RoomsActivity::class.java)
             )
             /*R.id.menu_website -> startActivity(
                 Intent(Intent.ACTION_VIEW, Uri.parse("https://dev-mind.fr"))
