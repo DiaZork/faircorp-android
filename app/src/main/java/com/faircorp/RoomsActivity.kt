@@ -2,7 +2,6 @@ package com.faircorp
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -54,8 +53,9 @@ class RoomsActivity : BasicActivity(), OnRoomSelectedListener {
                 }
         }
     }
+
     override fun onRoomSelected(id: Long) {
-//        val intent = Intent(this, WindowActivity::class.java).putExtra(ROOM_ID, id)
-//        startActivity(intent)
+        val intent = Intent(this, RoomActivity::class.java).putExtra(ROOM_ID, id)
+        startActivity(intent)
     }
 }

@@ -15,4 +15,9 @@
     <string name="act_window_room_target_temp">Target temperature</string>
     <string name="act_window_room_current_temp">Current temperature</string>
     <string name="act_window_status">Status</string>
+
+    <string name="act_view_room_name">Room name</string>
+    <string name="act_view_room_type">Type</string>
+    <string name="act_view_room_level">Level</string>
+
 </resources>

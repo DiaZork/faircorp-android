@@ -10,18 +10,13 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class WindowActivity : BasicActivity() {
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_window)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        //...
-        val param = intent.getStringExtra(WINDOW_NAME_PARAM)
-        val windowName = findViewById<TextView>(R.id.txt_window_name)
 
         val id = intent.getLongExtra(WINDOW_ID, 0)
-//        val window = windowService.findById(id)
+
         lifecycleScope.launch(context = Dispatchers.IO) { // (1)
             runCatching { MyApiServices().windowsApiService.findById(id).execute() } // (2)
                 .onSuccess {
@@ -50,7 +45,5 @@ class WindowActivity : BasicActivity() {
                     }
                 }
         }
-        if (param != null)
-            windowName.text = param
     }
 }
