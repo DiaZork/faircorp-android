@@ -16,8 +16,6 @@ class RoomsAdapter(val listener: OnRoomSelectedListener) :
         val name: TextView = view.findViewById(R.id.txt_room_item_name)
         val level: TextView = view.findViewById(R.id.txt_room_item_level)
         val type: TextView = view.findViewById(R.id.txt_room_item_type)
-//        val currentTemperature: TextView = view.findViewById(R.id.txt_room_item_current_temperature)
-//        val targetTemperature: TextView = view.findViewById(R.id.txt_room_item_target_temperature)
     }
 
     private val items = mutableListOf<RoomDto>()
@@ -40,8 +38,6 @@ class RoomsAdapter(val listener: OnRoomSelectedListener) :
             name.text = room.name
             level.text = room.level.toString()
             type.text = room.type
-//            currentTemperature.text = if (room.currentTemperature == null) null else room.currentTemperature.toString()
-//            targetTemperature.text = if (room.targetTemperature == null) null else room.targetTemperature.toString()
             itemView.setOnClickListener { listener.onRoomSelected((room.id)) }
         }
     }

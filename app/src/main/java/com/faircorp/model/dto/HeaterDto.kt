@@ -7,7 +7,7 @@ enum class HeaterStatus {
 data class HeaterDto(
     val id: Long,
     val name: String,
-    val power: Long,
+    val power: Long?,
     val room: RoomDto,
     val heaterStatus: HeaterStatus
 )

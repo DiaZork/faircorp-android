@@ -20,4 +20,8 @@
     <string name="act_view_room_type">Type</string>
     <string name="act_view_room_level">Level</string>
 
+    <string name="act_view_Heater_name">Heater name</string>
+    <string name="act_view_heater_power">Power</string>
+    <string name="act_view_heater_status">Status</string>
+
 </resources>

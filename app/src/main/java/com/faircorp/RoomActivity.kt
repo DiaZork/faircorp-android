@@ -25,10 +25,13 @@ class RoomActivity : BasicActivity() {
 
                         if (room != null) {
                             findViewById<TextView>(R.id.txt_view_room_name).text = room.name
-                            findViewById<TextView>(R.id.txt_view_room_level).text = room.level.toString()
+                            findViewById<TextView>(R.id.txt_view_room_level).text =
+                                room.level.toString()
                             findViewById<TextView>(R.id.txt_view_room_type).text = room.type
-                            findViewById<TextView>(R.id.txt_view_room_current_temp).text = if (room.currentTemperature != null) room.currentTemperature.toString() else ""
-                            findViewById<TextView>(R.id.txt_view_room_target_temp).text = if (room.targetTemperature != null) room.targetTemperature.toString() else ""
+                            findViewById<TextView>(R.id.txt_view_room_current_temp).text =
+                                if (room.currentTemperature != null) room.currentTemperature.toString() else ""
+                            findViewById<TextView>(R.id.txt_view_room_target_temp).text =
+                                if (room.targetTemperature != null) room.targetTemperature.toString() else ""
                         }
                     }
                 }

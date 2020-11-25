@@ -18,7 +18,7 @@ open class BasicActivity : AppCompatActivity() {
                 Intent(this, WindowsActivity::class.java)
             )
             R.id.menu_heaters -> startActivity(
-                Intent(this, WindowsActivity::class.java)
+                Intent(this, HeatersActivity::class.java)
             )
             R.id.menu_rooms -> startActivity(
                 Intent(this, RoomsActivity::class.java)

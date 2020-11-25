@@ -10,9 +10,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Faircorp">
-        <activity android:name=".RoomActivity" android:parentActivityName=".RoomsActivity" />
-        <activity android:name=".HeaterActivity" />
-        <activity android:name=".RoomsActivity" android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".HeatersActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".RoomActivity"
+            android:parentActivityName=".RoomsActivity" />
+        <activity
+            android:name=".HeaterActivity"
+            android:parentActivityName=".HeatersActivity" />
+        <activity
+            android:name=".RoomsActivity"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".WindowActivity"
             android:parentActivityName=".WindowsActivity" />
